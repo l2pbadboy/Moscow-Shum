@@ -19,7 +19,7 @@ class CircleWidget(QWidget):
 
 
     def draw_circle(self):
-        self.diameter = random.randint(0, 400)
+        self.diameter = random.randint(0, 390)
         self.update()
     def paintEvent(self, event):
         painter = QPainter(self)
