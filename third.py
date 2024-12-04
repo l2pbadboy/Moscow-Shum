@@ -17,13 +17,14 @@ class CircleWidget(QWidget):
 
         self.diameter = 0
 
-
     def draw_circle(self):
-        self.diameter = random.randint(0, 400)
+        self.diameter = random.randint(0, 390)
         self.update()
+
     def paintEvent(self, event):
         painter = QPainter(self)
-        painter.setBrush(QColor(255, 255, 0))
+        color = QColor(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
+        painter.setBrush(color)
         x = (self.width() - self.diameter) // 2
         y = (self.height() - self.diameter) // 2
         painter.drawEllipse(x, y, self.diameter, self.diameter)
